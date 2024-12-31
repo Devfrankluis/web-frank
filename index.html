@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="icon" type="image/png" href="brandname.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <video autoplay muted loop class="video-background">
+            <source src="backgroundkwiff.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div> 
+        <div class="container">
+            <div class="navbar nav-dark">
+                <div class="logo">
+                    <img src="brandname.png" alt="homeicon" width="125px">
+                </div>
+                <!-- Burger Menu Icon -->
+                <div class="burger-menu" onclick="toggleMenu()">
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                </div>
+                <!-- Navigation Menu -->
+                <nav id="nav-menu" class="nav-menu">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/Producpage/index.html">Products</a></li>
+                        <li><a href="/about-us/index.html ">About</a></li>
+                        <li><a href="/contact/index.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>WELCOME!</h1>
+                    <p style="color: white;"> Style with a Conscience: Elevate your look while embracing sustainability. <br>
+                        Wear your values and make a statement for a better world.
+                    </p>
+                        <a href="#content" class="btn">Explore Now  &#x279D;</a>
+                </div>
+            </div>
+        </div>
+    </div>     
+    </div>
+
+    <!-- Featured Categories -->
+    <div id="content" class="categories">
+        <div class="small-container">
+            <h2 class="title">Featured Products</h2>
+            <div class="carousel-container">
+                <!-- Carousel Wrapper -->
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="image3.jpg" alt="Category 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image28.jpg" alt="Category 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image10.jpg" alt="Category 3">
+                    </div>
+                </div>
+                <!-- Carousel Controls -->
+                <!-- <span class="carousel-prev">&#10094;</span>
+                <span class="carousel-next">&#10095;</span> -->
+            </div>
+            <center>
+                <a href="/Producpage/index.html" class="btn" target="_blank"> Learn more  &#x279D;</a>
+            </center>
+        </div>
+    </div>
+
+    <!-- About us -->
+    <div class="small-container">
+    <h2 class="title">About us</h2>
+    <center>
+        <p>Kwiff Clothing Founded on April 15, 2020, Kwiff Twe is a bold, fashion-forward clothing brand with a vision to redefine style. We believe that fashion should be a reflection of individuality, creativity, and confidence. From streetwear to everyday essentials, our designs blend comfort, quality, and a touch of edge, empowering our customers to express themselves with every piece. At Kwiff Twe, we’re more than just clothing—we’re a movement. Join us on our journey to bring fresh, unique style to the world, one garment at a time.</p>
+        <a href="/about-us/Index.html" class="btn" target="_blank"> Learn more  &#x279D;</a>
+    </center>
+    </div>
+
+    <!-- Our Location -->
+    <div class="small-container">
+        <h2 class="title">Our location</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sph!4v1730920607736!5m2!1sen!2sph!6m8!1m7!1su3MAxEpe9dvAHIUiZODPjQ!2m2!1d13.93844586975307!2d121.6131738140717!3f280.3605242166533!4f1.829874573033166!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br>
+            </div>
+            <center>
+                <a href="/about-us/Index.html" class="btn" target="_blank"> Learn more  &#x279D;</a>
+            </center>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="cta">
+                <h3>Stay Connected</h3>
+                <p>Subscribe to our newsletter for the latest updates.</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/kwiff.co/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 YourCompany. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

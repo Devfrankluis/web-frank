@@ -1,0 +1,606 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Poppins", serif;
+    scroll-behavior: smooth;
+}
+
+/* Existing Styles (unchanged) */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.header {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none; /* Hide the burger menu by default */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.burger-line {
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin: 0 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 253, 253); /* Default text color */
+    position: relative;
+    font-size: 16px; /* Adjust the font size if needed */
+    margin-right: 30px;
+  }
+  
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ff523b; /* Orange underline */
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease; /* Smooth transition effect */
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%; /* Full underline width on hover */
+  }
+
+/* Show the burger menu and hide navigation items on small screens */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex; /* Show the burger icon on small screens */
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -300px; /* Initially hide the menu off the screen */
+        background-color: #333;
+        height: 100%;
+        width: 250px;
+        transition: right 0.3s ease;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 80px; /* Align the menu links vertically */
+    }
+
+    .nav-menu.open {
+        right: 0; /* Slide the menu in */
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu li {
+        margin: 15px 0;
+    }
+
+    .nav-menu a {
+        font-size: 18px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+p {
+    color: #000000;
+}
+
+.row {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-2 {
+    display: contents;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.col-2 img {
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.col-2 h1 {
+    color: #fff;
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #000;
+}
+
+.header .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10%;
+}
+
+.categories {
+    margin: 70px 0;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.col-3 img {
+    width: 100%;
+}
+
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding: 40px 25px;
+}
+
+.carousel-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.carousel-item{
+    display: flex;
+    align-content: center;
+    width: auto;
+    height: auto;
+}
+
+.header .container .navbar-nav-dark .logo img {
+    height: auto;
+    width: 100px;
+}
+
+.categories .small-container .carousel-container .carousel .carousel-item img {
+    width: auto;
+    height: 350px;
+}
+
+.col-4 {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+
+.col-4 img {
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    margin: 0 auto 39px;
+    position: relative;
+    line-height: 60px;
+    color: #000;
+}
+
+.title:after {
+    content: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h4 {
+    color: #555;
+    font-weight: normal;
+}
+
+.col-4 p {
+    font-size: 14px;
+}
+
+.rating {
+    color: #ff523b;
+}
+
+.col-4:hover {
+    transform: translateY(-20px);
+}
+
+.header {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0; /* Behind other content */
+    transform: translate(-50%, -50%);
+}
+
+.video-background::before {
+    transition: all;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Above the video */
+}
+
+.container {
+    position: relative;
+    z-index: 2; /* Above the overlay */
+    margin: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 150px;
+    height: 100vh;
+}
+
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px 0;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+.cta {
+    text-align: left;
+}
+.cta h3 {
+    margin: 0 0 10px;
+}
+.cta p {
+    margin: 0;
+    font-size: 14px;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #00aced; /* Highlight color on hover */
+}
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* Container for the iframe */
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%;  /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #e5e5e5;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Responsive Adjustments */
+
+@media only screen and (max-width: 1200px) {
+    .col-2 h1 {
+        font-size: 40px;
+    }
+
+    .col-2 img {
+        width: 80%;
+    }
+
+    .col-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 10%
+    }
+
+    .col-3 {
+        flex-basis: 45%;
+    }
+
+    .navbar nav ul li {
+        margin-right: 20px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar nav {
+        text-align: right;
+        flex: 1;
+    }
+
+    .header {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .video-background {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .header .row {
+        margin-top: 228px;
+    }
+
+    .col-2 {
+        padding-top: 100px;
+        text-align: center;
+        display: contents;
+    }
+
+    .col-2 h1 {
+        font-size: 30px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+
+    .col-3 {
+        flex-basis: 100%;
+    }
+
+    .small-container {
+        padding: 30px 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-content a {
+        padding: 10px;
+    }
+
+    .video-background {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .col-2 h1 {
+        font-size: 25px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .col-3 {
+        flex-basis: 100%;
+    }
+
+    .footer-content a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .navbar nav ul li {
+        margin-right: 10px;
+    }
+
+    .navbar nav ul {
+        text-align: center;
+        width: 100%;
+    }
+
+    .col-2 img {
+        padding: 20px 0;
+    }
+
+    .title h2 {
+        font-size: 22px;
+    }
+
+    .video-background {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+}
+
+
+/* Show carousel only on mobile screens */
+@media (max-width: 768px) {
+    .carousel-container{
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px; */
+        gap: 2px;
+    }
+    
+    .carousel {
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+    }
+    
+    .carousel-item{
+        display: flex;
+        align-content: center;
+        width: auto;
+        height: auto;
+    
+    }
+
+    .small-container .carousel-container .carousel .carousel-item img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .video-background {
+        position: absolute;
+        top: 50;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+}
+

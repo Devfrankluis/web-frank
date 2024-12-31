@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="CodeHim">
+    <title>Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+  
+  </head>
+  <body>
+ <header class="intro">
+  <video autoplay muted loop class="video-background">
+    <source src="video2.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div> 
+  <div class="container">
+    <div class="navbar nav-dark">
+        <div class="logo">
+            <img src="brandname.png" alt="homeicon" width="125px">
+        </div>
+        <!-- Burger Menu Icon -->
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+        <!-- Navigation Menu -->
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Producpage/index.html">Products</a></li>
+                <li><a href="/about-us/index.html ">About</a></li>
+                <li><a href="/contact/index.html">Contact</a></li>
+            </ul>
+            <!--   end of cart modal -->
+            <div class="cart-btn">
+              <i id="cart" class="fas fa-shopping-cart"></i>
+              <span class ="cart-quantity">0</span>
+           </div>
+        </nav>
+      </div>
+      <div class="row">
+        <div class="col-2">
+            <h1>PRODUCTS</h1>
+            <center>
+            <p style="color: white;">Elevate your wardrobe with our premium clothing line designed for modern living<br> and crafted with sustainability in mind. Discover timeless styles, ethical materials, <br>brand unmatched comfort that inspire confidence in every moment. Shop the collection now.
+            </p>
+          </center>
+                <a href="#content" class="btn">Explore Now  &#x279D;</a>
+        </div>
+    </div>
+ </header>
+
+
+ <main>
+<div class="cart-modal-overlay">
+    <div class="cart-modal">
+      <i id="close-btn" class="fas fa-times"></i>
+        <h1 class="cart-is-empty">Cart is empty</h1>
+      
+        <div class="product-rows">
+        </div>
+        <div class="total">
+          <h1 class="cart-total">TOTAL</h1>
+            <span class="total-price">₱0</span>
+              <button class="purchase-btn">PURCHASE</button>
+        </div>
+      </div>
+</div>
+
+<div class="title">
+  <h1>Products</h1>
+</div>  
+
+<!--  products  -->
+  <div class="items-container">
+    <div class="card-1 card">
+      <img class="product-image" src="image1.jpg" alt="">
+        <button class="add-to-cart">Add to cart</button>
+          <span class="product-price">₱550</span>
+    </div>
+    <div class="card-2 card">
+      <img class="product-image" src="image10.jpg" alt="">
+      <button class="add-to-cart">Add to cart</button>
+        <span class="product-price">₱500</span>
+    </div>
+    <div class="card-3 card">
+      <img class="product-image" src="image12.jpg" alt="">
+        <button class="add-to-cart">Add to cart</button>
+          <span class="product-price">₱600</span>
+    </div>
+    <div class="card-4 card">
+      <img id="align" class="product-image" src="image27.jpg" alt="">
+         <button class="add-to-cart">Add to cart</button>
+        <span class="product-price">₱590</span>
+    </div>
+    <div class="card-5 card">
+      <img class="product-image" src="image28.jpg" alt="">
+      <button class="add-to-cart">Add to cart</button>
+      <span class="product-price">₱550</span>
+    </div>
+  </div>
+
+     <!-- END EDMO HTML (Happy Coding!)-->
+ </main>
+ 
+      
+ <footer>
+  <div class="footer-container">
+      <div class="cta">
+          <h3>Stay Connected</h3>
+          <p>Subscribe to our newsletter for the latest updates.</p>
+      </div>
+      <div class="social-icons">
+          <a href="https://www.facebook.com/kwiff.co/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      &copy; 2024 YourCompany. All rights reserved.
+  </div>
+</footer>
+  
+  <script  src="script.js"></script>
+  </body>
+</html>
